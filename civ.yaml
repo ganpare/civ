@@ -1,0 +1,231 @@
+apiVersion: haconiwa.dev/v1
+kind: Space
+metadata:
+  name: multiroom-test
+spec:
+  nations:
+  - id: jp
+    name: Japan
+    cities:
+    - id: tokyo
+      name: Tokyo
+      villages:
+      - id: test-village
+        name: Test Village
+        companies:
+        - name: test-multiroom-company
+          grid: 8x4
+          basePath: ./test-multiroom-desks
+          organizations:
+          - id: '01'
+            name: フロントエンドチーム
+            tasks:
+            - UI設計
+            - コンポーネント開発
+            - 状態管理
+            - レスポンシブ対応
+          - id: '02'
+            name: バックエンドチーム
+            tasks:
+            - API設計
+            - データベース設計
+            - ビジネスロジック
+            - 認証・認可
+          - id: '03'
+            name: DevOpsチーム
+            tasks:
+            - インフラ構築
+            - CI/CD
+            - 監視設定
+            - セキュリティ
+          - id: '04'
+            name: QAチーム
+            tasks:
+            - テスト設計
+            - 自動化テスト
+            - 品質管理
+            - パフォーマンステスト
+          gitRepo:
+            url: https://github.com/ganpare/civ
+            defaultBranch: main
+            auth: https
+          buildings:
+          - id: headquarters
+            name: Company Headquarters
+            floors:
+            - level: 1
+              rooms:
+              - id: room-01
+                name: Alpha Development Room
+                description: Main development environment for active features
+              - id: room-02
+                name: Beta Testing Room
+                description: Testing and QA environment for feature validation
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235602_ゲーム全体のuiux設計とワイヤーフレーム作成_01
+spec:
+  branch: 20250615235602_ゲーム全体のuiux設計とワイヤーフレーム作成_01
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: ゲーム全体のUI/UX設計とワイヤーフレーム作成
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235605_マップ表示タイルクリック都市ユニット表示の実装_02
+spec:
+  branch: 20250615235605_マップ表示タイルクリック都市ユニット表示の実装_02
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: マップ表示・タイルクリック・都市/ユニット表示の実装
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235608_都市管理画面建設資源表示開発メニューの実装_03
+spec:
+  branch: 20250615235608_都市管理画面建設資源表示開発メニューの実装_03
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: 都市管理画面（建設、資源表示、開発メニュー）の実装
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235611_マルチルーム部屋リストルーム作成参加uiの実装_04
+spec:
+  branch: 20250615235611_マルチルーム部屋リストルーム作成参加uiの実装_04
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: マルチルーム（部屋リスト、ルーム作成/参加UI）の実装
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235614_ターン制進行資源管理勝利条件などゲームロジックの実装_05
+spec:
+  branch: 20250615235614_ターン制進行資源管理勝利条件などゲームロジックの実装_05
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: ターン制進行・資源管理・勝利条件などゲームロジックの実装
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235617_マルチルームの管理api部屋作成参加同期処理実装_06
+spec:
+  branch: 20250615235617_マルチルームの管理api部屋作成参加同期処理実装_06
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: マルチルームの管理API（部屋作成、参加、同期処理）実装
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235620_ユーザー認証セッション管理apiの実装_07
+spec:
+  branch: 20250615235620_ユーザー認証セッション管理apiの実装_07
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: ユーザー認証・セッション管理APIの実装
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235623_ユーザー都市マップルームなどのdbスキーマ設計作成_08
+spec:
+  branch: 20250615235623_ユーザー都市マップルームなどのdbスキーマ設計作成_08
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: ユーザー、都市、マップ、ルームなどのDBスキーマ設計・作成
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235626_cicdパイプラインの構築自動テスト自動デプロイ_09
+spec:
+  branch: 20250615235626_cicdパイプラインの構築自動テスト自動デプロイ_09
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: CI/CDパイプラインの構築（自動テスト・自動デプロイ）
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235629_フロントバックエンドのdocker化と開発環境の統一_10
+spec:
+  branch: 20250615235629_フロントバックエンドのdocker化と開発環境の統一_10
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: フロント・バックエンドのDocker化と開発環境の統一
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235632_クラウドインフラawsgcp等へのプロビジョニング_11
+spec:
+  branch: 20250615235632_クラウドインフラawsgcp等へのプロビジョニング_11
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: クラウドインフラ（AWS/GCP等）へのプロビジョニング
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235635_機能要件に基づいたテスト計画とケース策定_12
+spec:
+  branch: 20250615235635_機能要件に基づいたテスト計画とケース策定_12
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: 機能要件に基づいたテスト計画とケース策定
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235638_主要画面フローのe2e自動テスト作成実施_13
+spec:
+  branch: 20250615235638_主要画面フローのe2e自動テスト作成実施_13
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: 主要画面・フローのE2E自動テスト作成・実施
+
+---
+apiVersion: haconiwa.dev/v1
+kind: Task
+metadata:
+  name: 20250615235642_マルチルーム同期複数人同時プレイの動作テスト_14
+spec:
+  branch: 20250615235642_マルチルーム同期複数人同時プレイの動作テスト_14
+  worktree: true
+  assignee: org01-pm-r1
+  spaceRef: test-multiroom-company
+  description: マルチルーム同期・複数人同時プレイの動作テスト
